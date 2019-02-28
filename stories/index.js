@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '@storybook/react/demo';
 import Header from '../src/Header'
 import Characters from '../src/Characters'
+import Throne from '../src/Throne'
 
 const characters = [
   {
@@ -71,6 +72,7 @@ class GameWithState extends React.Component {
           {...this.state}
           handleCharacterUpdate={ this.handleCharacterUpdate }
         />
+        <Throne />
       </div>
     )
   }
