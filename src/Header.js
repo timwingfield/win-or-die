@@ -1,20 +1,13 @@
-import { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <div>things</div>
-    )
-  }
-}
-
-Header.propTypes = {
-  //propName: PropTypes...
+const Header = () => {
+  return (
+    <div>
+      <h1 id="title">Game of A Game of Thrones</h1>
+      <p id="rules">The rules...</p>
+    </div>
+  )
 }
 
 export default Header
