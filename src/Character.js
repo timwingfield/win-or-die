@@ -28,10 +28,10 @@ class Character extends Component {
   render() {
     return (
       <tr>
-        <td>{ this.props.name }</td>
-        <td onClick={ this.setCharacterAsAlive }>{ this.props.status === "alive" ? "X" : "" }</td>
-        <td onClick={ this.setCharacterAsDead }>{ this.props.status === "dead" ? "X" : "" }</td>
-        <td onClick={ this.toggleCharacterAsWhiteWalker }>{ this.props.walker ? "X" : "" }</td>
+        <td id="name">{ this.props.name }</td>
+        <td id="alive" onClick={ this.setCharacterAsAlive }>{ this.props.status === "alive" ? "X" : "" }</td>
+        <td id="dead" onClick={ this.setCharacterAsDead }>{ this.props.status === "dead" ? "X" : "" }</td>
+        <td id="walker" onClick={ this.toggleCharacterAsWhiteWalker }>{ this.props.walker ? "X" : "" }</td>
       </tr>
     )
   }

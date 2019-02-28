@@ -33,7 +33,7 @@ class Characters extends Component {
 }
 
 Characters.propTypes = {
-  characters: PropTypes.arrayOf(PropTypes.object).required,
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleCharacterUpdate: PropTypes.func,
 }
 
