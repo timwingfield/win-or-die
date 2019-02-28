@@ -68,10 +68,13 @@ class GameWithState extends React.Component {
     return (
       <div>
         <Header />
+        <br />
         <Characters
           {...this.state}
           handleCharacterUpdate={ this.handleCharacterUpdate }
         />
+        <br />
+        <br />
         <Throne />
       </div>
     )
