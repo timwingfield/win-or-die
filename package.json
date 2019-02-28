@@ -18,6 +18,6 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "./node_modules/mocha/bin/mocha ./src/**/*.spec*"
+    "test": "./node_modules/mocha/bin/mocha ./src/**/*.spec* -R nyan"
   }
 }
