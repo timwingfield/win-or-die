@@ -9,7 +9,7 @@ class Characters extends Component {
 
   listCharacters() {
     return this.props.characters.map( (c) => {
-      return <Character {...c} />
+      return <Character {...c} key={ c.id } handleCharacterUpdate={ this.props.handleCharacterUpdate } />
     })
   }
 
@@ -17,13 +17,15 @@ class Characters extends Component {
     return (
       <div id="character-list">
         <table border="1" width="600">
-          <tr>
-            <th>Name</th>
-            <th>Alive</th>
-            <th>Dead</th>
-            <th>White Walker</th>
-          </tr>
-          { this.listCharacters() }
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Alive</th>
+              <th>Dead</th>
+              <th>White Walker</th>
+            </tr>
+            { this.listCharacters() }
+          </tbody>
         </table>
       </div>
     )
@@ -32,6 +34,7 @@ class Characters extends Component {
 
 Characters.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).required,
+  handleCharacterUpdate: PropTypes.func,
 }
 
 export default Characters
